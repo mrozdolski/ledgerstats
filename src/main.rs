@@ -105,6 +105,7 @@ fn calculate_average_depth(graph: &HashMap<usize, Vec<usize>>) -> f64 {
     }
 }
 
+#[allow(unused_variables)]
 fn calculate_average_txs_per_depth(
     nodes: &[TransactionNode],
     graph: &HashMap<usize, Vec<usize>>,
@@ -148,6 +149,8 @@ fn calculate_average_txs_per_depth(
 fn count_transactions_at_depth(nodes: &[TransactionNode], depth: usize) -> usize {
     nodes.iter().filter(|&node| node.timestamp == depth).count()
 }
+
+#[allow(unused_variables)]
 fn calculate_average_in_references(
     nodes: &[TransactionNode],
     graph: &HashMap<usize, Vec<usize>>,
